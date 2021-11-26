@@ -15,6 +15,6 @@ public class AutoCommand extends SequentialCommandGroup {
   public AutoCommand(DriveSubsystem drive) {
     // Add your commands in the addCommands() call, e.g.
     // addCommands(new FooCommand(), new BarCommand());
-    addCommands(new ForwardCommand(drive).withTimeout(4), new AngleCommand(drive), new ForwardCommand(drive).withTimeout(4), new AngleCommand(drive));
+    addCommands(new ForwardCommand(drive).withTimeout(4), new AngleCommand(drive).withTimeout(2), new ForwardCommand(drive).withTimeout(4), new AngleCommand(drive).withTimeout(2));
   }
 }
