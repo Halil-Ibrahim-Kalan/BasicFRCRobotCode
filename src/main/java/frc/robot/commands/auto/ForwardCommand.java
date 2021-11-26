@@ -6,13 +6,11 @@ package frc.robot.commands.auto;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.DriveSubsystem;
-import edu.wpi.first.wpilibj.Timer;
 
 public class ForwardCommand extends CommandBase {
   /** Creates a new forwardCommand. */
   DriveSubsystem m_drive;
-  Timer m_timer = new Timer();
-
+  
   public ForwardCommand(DriveSubsystem drive) {
     // Use addRequirements() here to declare subsystem dependencies.
     m_drive = drive;
@@ -21,10 +19,7 @@ public class ForwardCommand extends CommandBase {
 
   // Called when the command is initially scheduled.
   @Override
-  public void initialize() {
-    m_timer.reset();
-    m_timer.start();
-  }
+  public void initialize() {}
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
